@@ -11,9 +11,10 @@ Prerana Uppalapati (SJSU ID: 015933138)
 
 Prerana Uppalapati :
 
-Worked on building the kernel
-Forked the Linux Repository
-Made required changes to the files as suggested by Professor Larkin in the class assignment videos
+- Worked on building the kernel
+- Forked the Linux Repository
+- Made required changes to the files as suggested by Professor Larkin in the class assignment videos
+- Worked on the documentation
 
 Venkata Lakshmi Praneetha Moturi :
  - To create a local copy of Linux Kernel, downloaded and built the Linux modules and required libraries.
