@@ -66,8 +66,13 @@ A machine capable of running Linux, with VMX virtualization features exposed.
 The final step is to add, commit and push the cmpe283-1.c and Makefile onto the forked git repository using the following commands: $ git add cmpe283-1.c Makefile $ git commit $ git push
 
 ![Screenshot from 2022-04-22 14-23-15](https://user-images.githubusercontent.com/51155654/164881230-1ff34d1b-afe6-4b97-babc-18e108693b60.png)
+
 ![Screenshot from 2022-04-22 15-59-39](https://user-images.githubusercontent.com/51155654/164881235-52750708-61e2-429e-9420-9be9e0fd6854.png)
+
 ![Screenshot from 2022-04-22 16-00-01](https://user-images.githubusercontent.com/51155654/164881238-a96d2411-7615-4972-8764-640d42a8e6ab.png)
+
+
+-------------------------------------------------------------------------------------------
 
 
 ## ASSIGNMENT 2
@@ -78,13 +83,11 @@ Venkata Lakshmi Praneetha Moturi (SJSU ID: 015913495)
 
 Prerana Uppalapati (SJSU ID: 015933138)
 
-Modified the cpuid file, vmx file and test file according to the requirement.
 
-
-# Work Implemented by each member
+# Work Implemented by each member ( Question 1)
 
 Prerana Uppalapati
--
+- Modified the vmx file and test file according to the requirement.
 
 
 Venkata Lakshmi Praneetha Moturi
@@ -104,9 +107,9 @@ For CPUID leaf function %eax=0x4FFFFFFF:
 • Return the low 32 bits of the total time spent processing all exits in %ecx
 • %ebx and %ecx return values are measured in processor cycles
 
-## Steps Followed :
+## Steps Followed : (Question 2)
 
-Initial Setup
+Build Initial Setup
 1. First Build environment https://wiki.ubuntu.com/Kernel/BuildYourOwnKernel
 2. Next, Clone the Kernel code from GitHub: git clone https://github.com/torvalds/linux.git
 3. Now, for Kernel Code Compilation : use
@@ -130,14 +133,29 @@ First Write test.c Next, Install gcc https://linuxize.com/post/how-to-install-gc
 
 Then Check host VM kern.log: tail -n20 /var/log/kern.log
 
+
+
 ![WhatsApp Image 2022-04-22 at 8 32 36 PM (1)](https://user-images.githubusercontent.com/89679306/164880122-b10f9587-8ac9-4dc0-bc03-1c63a5e416f0.jpeg)
+
+
 
 ![WhatsApp Image 2022-04-22 at 8 32 36 PM (2)](https://user-images.githubusercontent.com/89679306/164880264-fbebe7ba-5dc0-4e47-8d90-210801e81b87.jpeg)
 
+
+
 ![WhatsApp Image 2022-04-22 at 8 32 36 PM (3)](https://user-images.githubusercontent.com/89679306/164880400-43416723-9ad9-43ff-802f-22338513dd70.jpeg)
 
+
+
 ![WhatsApp Image 2022-04-22 at 8 32 37 PM](https://user-images.githubusercontent.com/89679306/164880468-4f7511a1-a2e0-4853-b49f-4f760b441309.jpeg)
+
+
+
 ![WhatsApp Image 2022-04-22 at 8 32 37 PM (1)](https://user-images.githubusercontent.com/89679306/164880560-a47907ea-e2ff-4148-970d-63a5ce3cfe50.jpeg)
+
+
+
+
 
 ## 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
 
