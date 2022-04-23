@@ -1,18 +1,60 @@
-Linux kernel
-============
+# Assignment 1
 
-There are several guides for kernel developers and users. These guides can
-be rendered in a number of formats, like HTML and PDF. Please read
-Documentation/admin-guide/README.rst first.
+To create a Linux kernel module that will query various MSRs to determine virtualization features available in our CPU. This module will report (via the system message log) the features it discovers.
 
-In order to build the documentation, use ``make htmldocs`` or
-``make pdfdocs``.  The formatted documentation can also be read online at:
+# Team Members :
 
-    https://www.kernel.org/doc/html/latest/
+Venkata Lakshmi Praneetha Moturi (SJSU ID: 015913495)
+Prerana Uppalapati (SJSU ID: 015933138)
 
-There are various text files in the Documentation/ subdirectory,
-several of them using the Restructured Text markup notation.
+# To-Do:
 
-Please read the Documentation/process/changes.rst file, as it contains the
-requirements for building and running the kernel, and information about
-the problems which may result by upgrading your kernel.
+To Discover VMX Features
+
+# Prerequisites: 
+
+A machine capable of running Linux, with VMX virtualization features exposed.
+
+# Implementation Steps Followed :
+
+1. Download and install VMWare Workstation 16 Player from https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html
+
+2. Download and install Ubuntu from here https://ubuntu.com/download/desktop and allocate 8 GB RAM and at least 200 GB Storage Space.
+
+3. Fork the master branch of Linux from Torvalds’s Repo https://github.com/torvalds/linux
+
+4. Install git on Ubuntu by typing the following command in the terminal: $ sudo apt install git.
+
+5.  After installation set the global config of git using the following commands: $ git config --global user.name "<your_github_username>" $ git config --global user.email "<your_github_email_address>"
+
+6. Clone the forked Linux git repo onto the home directory of the system by navigating to the forked git repo and then clicking on code and copy the HTTPS URL and then type the following command: $ git clone https://github.com/preranaupplapati/linux.git
+
+7. Following are some of the commands I used to overcome the errors I encountered during the compilation of the cloned repo: $ sudo apt-get install libelf-dev $ sudo apt-get install gcc $ sudo apt-get install flex $ sudo apt-get install bison $ sudo apt-get install libncurses5-dev $ sudo apt-get install libssl-dev $ sudo apt install dwarves $ sudo apt-get install -y zstd
+
+8. Next, navigate to the Linux directory and run the following command: Make menuconfig with $ This command will show up a window asking whether you want to load a certain kernel configuration; I just hit Exit.
+
+9. Type the command $ uname -a to check the current kernel version.
+
+10. Next execute the commands: $ make oldconfig $ make prepare
+
+11. Next step is to make modules using the command: $ make -j 8 modules
+
+12. Now, make the kernel using the command: $ make -j 8
+
+13. Install the modules using the following command: $ sudo make INSTALL_MOD_STRIP=1 modules_install
+
+14. To install the new kernel, type the following command: $ sudo make install and after installation I rebooted the system using the command: $ sudo reboot This will apply the changes made to the kernel.
+
+15. After the reboot is complete, I verified my kernel version using the command: $ uname -a My kernel version got changed  which confirms that the kernel was correctly installed.
+
+16. After this I copied the Makefile and the cmpe283-1.c file into the linux/cmpe283/ directory to commit my changes in my repo.
+
+17. Next step is to use the make command in the cmpe283 directory to generate a kernel object so, now Verify the creation of the kernel object file using the following command: $ ls |grep *.ko
+
+18. Now using the following command: $ sudo insmod cmpe283-1.ko  to insert the cmpe283-1.ko file into the kernel and run the file.
+
+19. The command: $ lsmod | grep cmpe283 to verify if it was inserted correctly and it displays "cmpe283_1 if inserted correctly "
+
+20. The command: $ dmesg will print out the VMX features which I added into the file onto the terminal console.
+
+21. Next, using the command: $ sudo rmmod cmpe283_1. I deleted the file from the kernel. This will print the Assignment 1 end print message after executing the dmesg command again.
