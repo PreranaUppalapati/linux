@@ -59,6 +59,10 @@ A machine capable of running Linux, with VMX virtualization features exposed.
 13. The command: $ dmesg will print out the VMX features which I added into the file onto the terminal console.
 
 14. Next, using the command: $ sudo rmmod cmpe283_1. I deleted the file from the kernel. This will print the Assignment 1 end print message after executing the dmesg command again.
+15. 
+![Screenshot from 2022-04-22 23-26-32](https://user-images.githubusercontent.com/51155654/164882930-23b9a20e-35df-473c-a8e7-bbd526d1de52.png)
+
+
 
 ## Output 
 
