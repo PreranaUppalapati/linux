@@ -1018,7 +1018,34 @@ struct kvm_cpuid_entry2 *kvm_find_cpuid_entry(struct kvm_vcpu *vcpu,
 }
 EXPORT_SYMBOL_GPL(kvm_find_cpuid_entry);
 
-
+/*
+ * Intel CPUID semantics treats any query for an out-of-range leaf as if the
+ * highest basic leaf (i.e. CPUID.0H:EAX) were requested.  AMD CPUID semantics
+ * returns all zeroes for any undefined leaf, whether or not the leaf is in
+ * range.  Centaur/VIA follows Intel semantics.
+ *
+ * A leaf is considered out-of-range if its function is higher than the maximum
+ * supported leaf of its associated class or if its associated class does not
+ * exist.
+ *
+ * There are three primary classes to be considered, with their respective
+ * ranges described as "<base> - <top>[,<base2> - <top2>] inclusive.  A primary
+ * class exists if a guest CPUID entry for its <base> leaf exists.  For a given
+ * class, CPUID.<base>.EAX contains the max supported leaf for the class.
+ *
+ *  - Basic:      0x00000000 - 0x3fffffff, 0x50000000 - 0x7fffffff
+ *  - Hypervisor: 0x40000000 - 0x4fffffff
+ *  - Extended:   0x80000000 - 0xbfffffff
+ *  - Centaur:    0xc0000000 - 0xcfffffff
+ *
+ * The Hypervisor class is further subdivided into sub-classes that each act as
+ * their own independent class associated with a 0x100 byte range.  E.g. if Qemu
+ * is advertising support for both HyperV and KVM, the resulting Hypervisor
+ * CPUID sub-classes are:
+ *
+ *  - HyperV:     0x40000000 - 0x400000ff
+ *  - KVM:        0x40000100 - 0x400001ff
+ */
 static struct kvm_cpuid_entry2 *
 get_out_of_range_cpuid_entry(struct kvm_vcpu *vcpu, u32 *fn_ptr, u32 index)
 {
@@ -1118,7 +1145,7 @@ int kvm_emulate_cpuid(struct kvm_vcpu *vcpu)
 	eax = kvm_rax_read(vcpu);
 	ecx = kvm_rcx_read(vcpu);
 
-	// CMPE283 updating exit counters
+	// CMPE283
 	if(eax == 0x4fffffff){
 		printk(KERN_INFO "Update the registers");
 		kvm_cpuid(vcpu, &eax, &ebx, &ecx, &edx, true);
