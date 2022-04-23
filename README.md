@@ -72,6 +72,10 @@ The final step is to add, commit and push the cmpe283-1.c and Makefile onto the 
 ![Screenshot from 2022-04-22 16-00-01](https://user-images.githubusercontent.com/51155654/164881238-a96d2411-7615-4972-8764-640d42a8e6ab.png)
 
 
+
+![Screenshot from 2022-04-22 16-00-16](https://user-images.githubusercontent.com/51155654/164882779-04cfad5c-e659-43bc-8924-3cdc510b0db5.png)
+![Screenshot from 2022-04-22 16-00-25](https://user-images.githubusercontent.com/51155654/164882782-0c67e994-869b-48d0-a217-141029ed34f6.png)
+
 -------------------------------------------------------------------------------------------
 
 
