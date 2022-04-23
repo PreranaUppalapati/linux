@@ -11,8 +11,9 @@ Prerana Uppalapati (SJSU ID: 015933138)
 
 Prerana Uppalapati :
 
-
-
+Worked on building the kernel
+Forked the Linux Repository
+Made required changes to the files as suggested by Professor Larkin in the class assignment videos
 
 Venkata Lakshmi Praneetha Moturi :
  - To create a local copy of Linux Kernel, downloaded and built the Linux modules and required libraries.
@@ -64,17 +65,31 @@ A machine capable of running Linux, with VMX virtualization features exposed.
 
 The final step is to add, commit and push the cmpe283-1.c and Makefile onto the forked git repository using the following commands: $ git add cmpe283-1.c Makefile $ git commit $ git push
 
+![Screenshot from 2022-04-22 14-23-15](https://user-images.githubusercontent.com/51155654/164881230-1ff34d1b-afe6-4b97-babc-18e108693b60.png)
+![Screenshot from 2022-04-22 15-59-39](https://user-images.githubusercontent.com/51155654/164881235-52750708-61e2-429e-9420-9be9e0fd6854.png)
+![Screenshot from 2022-04-22 16-00-01](https://user-images.githubusercontent.com/51155654/164881238-a96d2411-7615-4972-8764-640d42a8e6ab.png)
+
+
 ## ASSIGNMENT 2
 
 # Team Members :
 
 Venkata Lakshmi Praneetha Moturi (SJSU ID: 015913495)
+
 Prerana Uppalapati (SJSU ID: 015933138)
+
+Modified the cpuid file, vmx file and test file according to the requirement.
+
 
 # Work Implemented by each member
 
 Prerana Uppalapati
 -
+![Screenshot from 2022-04-22 16-00-16](https://user-images.githubusercontent.com/51155654/164881241-6486fe52-65d0-4c1d-8f64-31ee7cc5c136.png)
+
+![Screenshot from 2022-04-22 16-00-25](https://user-images.githubusercontent.com/51155654/164881243-f01d0830-45c5-4a76-9140-43b38374ad36.png)
+
+![Uploading Screenshot from 2022-04-22 16-09-08.png…]()
 
 
 Venkata Lakshmi Praneetha Moturi
