@@ -1,4 +1,4 @@
-# Assignment 1
+## Assignment 1
 
 To create a Linux kernel module that will query various MSRs to determine virtualization features available in our CPU. This module will report (via the system message log) the features it discovers.
 
