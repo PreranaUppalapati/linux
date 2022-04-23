@@ -20,6 +20,7 @@ Venkata Lakshmi Praneetha Moturi :
  - To create a local copy of Linux Kernel, downloaded and built the Linux modules and required libraries.
  - With sample outputs, Verified the code functionality if it's working or not.
  - Documentation work
+ - Generated output files and made commits to git.
 
 # To-Do:
 
@@ -61,8 +62,6 @@ A machine capable of running Linux, with VMX virtualization features exposed.
 
 ## Output 
 
-![WhatsApp Image 2022-04-22 at 8 32 36 PM](https://user-images.githubusercontent.com/89679306/164879218-a05791bb-0e15-4476-93c8-8e5d24a08c24.jpeg)
-
 
 The final step is to add, commit and push the cmpe283-1.c and Makefile onto the forked git repository using the following commands: $ git add cmpe283-1.c Makefile $ git commit $ git push
 
@@ -86,15 +85,13 @@ Modified the cpuid file, vmx file and test file according to the requirement.
 
 Prerana Uppalapati
 -
-![Screenshot from 2022-04-22 16-00-16](https://user-images.githubusercontent.com/51155654/164881241-6486fe52-65d0-4c1d-8f64-31ee7cc5c136.png)
-
-![Screenshot from 2022-04-22 16-00-25](https://user-images.githubusercontent.com/51155654/164881243-f01d0830-45c5-4a76-9140-43b38374ad36.png)
-
-![Uploading Screenshot from 2022-04-22 16-09-08.png…]()
 
 
 Venkata Lakshmi Praneetha Moturi
-- 
+- Modify the cupid.c file
+- Install Virtual Machine Manager on the VM.
+- Install ubuntu on a inner VM using Virtual machine manager.
+- Install the cupid package on the innervm.
 
 TO-DO :
 
@@ -144,4 +141,4 @@ Then Check host VM kern.log: tail -n20 /var/log/kern.log
 
 ## 3. Comment on the frequency of exits – does the number of exits increase at a stable rate? Or are there more exits performed during certain VM operations? Approximately how many exits does a full VM boot entail?
 
-Answer : No, the number of exits doesnot increase at a stable rate but unstable rate.
+Answer : No, the number of exits doesnot increase at a stable rate but unstable rate. Other VM operations, such as EPT violation, RDRAND, I/O instructions, RDTSCP, and so on, exits are executed. After the first build, rebooting, and using KVM to enter the nested VM, there were 156,411 exits. Because there may be a shutdown time with a hardware disruption in between, this may not be very accurate.
