@@ -230,13 +230,14 @@ The number of exits does not increase at a constant rate, as evidenced by the re
 Answer:
 The most frequent exit types include external interrupt, cpuid, I/O instruction, and so on. MOV DR, INVD, and other exit types are the least frequent.
 
-![image](https://user-images.githubusercontent.com/89679306/166095108-c4f24d60-6db0-4ba5-80dd-ceeddab01c13.png)
 
 
-![image](https://user-images.githubusercontent.com/89679306/166095111-6b27fb44-01b5-485d-b4a5-d4127d1716b9.png)
+![image](https://user-images.githubusercontent.com/89679306/166095349-cfcd35f2-1432-4313-b93b-d420906077c0.png)
 
 
-![image](https://user-images.githubusercontent.com/89679306/166095113-09324a03-343c-4ac9-8c51-e25ad3b51e34.png)
+
+![image](https://user-images.githubusercontent.com/89679306/166095411-980578b2-183e-4c46-9396-034ed4050a2b.png)
+
 
 
 
@@ -301,5 +302,5 @@ In contrast to what we see in nested paging, we do not see EPT exits in shadow p
 The number of exits for shadow paging (without ept) continues to grow in comparison to nested paging (with ept).
 
 
-![image](https://user-images.githubusercontent.com/89679306/166095349-cfcd35f2-1432-4313-b93b-d420906077c0.png)
+
 
