@@ -263,11 +263,12 @@ We had a meeting at library and did this research together. All the mentioned an
 - To see the current count of exits for all the exit reasons, run dmesg command 
 With EPT :
 
-SS
+
+![image](https://user-images.githubusercontent.com/89679306/166095125-65400f82-8c6b-48c6-9565-c8c5a10d8f52.png)
 
 With ept =0 after insterting the module :
 
-Ss
+![image](https://user-images.githubusercontent.com/89679306/166095138-765550f3-f0ef-4d68-a46d-de4733364410.png)
 
 
 1. Test nested paging
@@ -298,12 +299,5 @@ In contrast to what we see in nested paging, we do not see EPT exits in shadow p
 
 The number of exits for shadow paging (without ept) continues to grow in comparison to nested paging (with ept).
 
-WITH EPT
-
-![image](https://user-images.githubusercontent.com/89679306/166095125-65400f82-8c6b-48c6-9565-c8c5a10d8f52.png)
-
-With EPT = 0
-
-![image](https://user-images.githubusercontent.com/89679306/166095138-765550f3-f0ef-4d68-a46d-de4733364410.png)
 
 
