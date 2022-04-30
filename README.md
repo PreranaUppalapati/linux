@@ -1,4 +1,4 @@
-## Assignment 1
+## ASSIGNMENT 1
 
 To create a Linux kernel module that will query various MSRs to determine virtualization features available in our CPU. This module will report (via the system message log) the features it discovers.
 
@@ -170,7 +170,7 @@ Then Check host VM kern.log: tail -n20 /var/log/kern.log
 Answer : No, the number of exits doesnot increase at a stable rate but unstable rate. Other VM operations, such as EPT violation, RDRAND, I/O instructions, RDTSCP, and so on, exits are executed. After the first build, rebooting, and using KVM to enter the nested VM, there were 156,411 exits. Because there may be a shutdown time with a hardware disruption in between, this may not be very accurate.
 
 
-## Assignment 3 :
+## ASSIGNMENT 3 :
 
 ## Description : 
 
@@ -180,7 +180,6 @@ Focuses on modifying the CPUID emulation code in KVM so that when a special CPID
 
 Prerana Uppalapati (015933138)
 - Using cpuid package in the inner VM, tested the modifications made for leaf nodes 
-- 
 
 Praneetha Moturi ( 015913495)
 - Based on findings, modified vmx.c file.
@@ -233,13 +232,15 @@ The most frequent exit types include external interrupt, cpuid, I/O instruction,
 
 ![image](https://user-images.githubusercontent.com/89679306/166095108-c4f24d60-6db0-4ba5-80dd-ceeddab01c13.png)
 
+
 ![image](https://user-images.githubusercontent.com/89679306/166095111-6b27fb44-01b5-485d-b4a5-d4127d1716b9.png)
+
 
 ![image](https://user-images.githubusercontent.com/89679306/166095113-09324a03-343c-4ac9-8c51-e25ad3b51e34.png)
 
 
 
-## Assignment-4
+## ASSIGNMENT 4
 
 ## T0-D0:
 
