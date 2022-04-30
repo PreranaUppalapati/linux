@@ -301,4 +301,5 @@ In contrast to what we see in nested paging, we do not see EPT exits in shadow p
 The number of exits for shadow paging (without ept) continues to grow in comparison to nested paging (with ept).
 
 
+![image](https://user-images.githubusercontent.com/89679306/166095349-cfcd35f2-1432-4313-b93b-d420906077c0.png)
 
